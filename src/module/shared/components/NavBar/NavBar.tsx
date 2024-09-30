@@ -12,7 +12,6 @@ const NavBar = () => {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarNav" />
       </Container>
     </Navbar>
   );
