@@ -20,6 +20,12 @@ const Header = ({ onFilter }: HeaderProps) => {
     onFilter(selectedNat?.value || null, selectedGender?.value || null);
   };
 
+  const handleClearFilters = () => {
+    setSelectedNat(null);
+    setSelectedGender(null);
+    onFilter(null, null);
+  };
+
   return (
     <section className="mb-3">
       <Row>
@@ -44,6 +50,7 @@ const Header = ({ onFilter }: HeaderProps) => {
           selectedGender={selectedGender}
           setSelectedGender={setSelectedGender}
           onFilter={handleFilter}
+          onClearFilters={handleClearFilters}
         />
       )}
     </section>

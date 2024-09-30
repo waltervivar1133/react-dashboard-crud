@@ -8,6 +8,7 @@ interface FiltersProps {
   selectedGender: { value: string; label: string } | null;
   setSelectedGender: (option: { value: string; label: string } | null) => void;
   onFilter: () => void;
+  onClearFilters: () => void;
 }
 
 const Filters = ({
@@ -16,6 +17,7 @@ const Filters = ({
   selectedGender,
   setSelectedGender,
   onFilter,
+  onClearFilters,
 }: FiltersProps) => {
   return (
     <Row>
@@ -23,7 +25,7 @@ const Filters = ({
         <Card className="shadow-sm p-0 border-0 m-0">
           <Card.Body>
             <Row className="g-2">
-              <Col md={4}>
+              <Col md={4} >
                 <SearchableDropdown
                   options={nationalityOptions}
                   placeholder="Nacionalidad"
@@ -32,7 +34,7 @@ const Filters = ({
                 />
               </Col>
 
-              <Col md={4}>
+              <Col md={4} >
                 <SearchableDropdown
                   options={genderOptions}
                   placeholder="Género"
@@ -41,13 +43,22 @@ const Filters = ({
                 />
               </Col>
 
-              <Col md={2}>
+              <Col md={2} >
                 <Button
                   variant="primary"
-                  className="header__search-button px-4 d-flex align-items-center justify-content-center"
+                  className=" header__search-button px-4 d-flex align-items-center justify-content-center"
                   onClick={onFilter}
                 >
                   <i className="bi bi-search me-2"></i>Buscar
+                </Button>
+              </Col>
+              <Col md={2} >
+                <Button
+                  variant="outline-secondary"
+                  className="d-flex header__clear-button px-4 d-flex align-items-center justify-content-center"
+                  onClick={onClearFilters}
+                >
+                  <i className="bi bi-x-circle me-2"></i>Limpiar
                 </Button>
               </Col>
             </Row>

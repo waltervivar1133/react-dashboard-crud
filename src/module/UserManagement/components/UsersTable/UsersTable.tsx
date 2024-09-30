@@ -3,12 +3,13 @@ import { columns } from "../../constants/columns";
 import Loader from "@/module/shared/components/Loader/Loader";
 import { User } from "../../types/User";
 import NoRecords from "@/module/shared/components/NoRecords/NoRecords";
+import ErrorService from "@/module/shared/components/ErrorService/ErrorService";
 
 interface UserTableProps {
   data: User[] | undefined;
   isLoading: boolean;
   error: Error | null;
-  onSelectUser: (user: User) => void;
+  onSelectUser: (user: User | null) => void;
 }
 
 const UserTable = ({
@@ -17,19 +18,12 @@ const UserTable = ({
   error,
   onSelectUser,
 }: UserTableProps) => {
-
-  const handleSelectedRowsChange = (selected: {
-    allSelected: boolean;
-    selectedCount: number;
-    selectedRows: User[];
-  }) => {
-    if (selected.selectedRows.length > 0) {
-      onSelectUser(selected.selectedRows[0]);
-    }
+  const handleSelectedRowsChange = (selected: { selectedRows: User[] }) => {
+    onSelectUser(selected.selectedRows[0] || null);
   };
 
   if (error) {
-    return <p>Error al cargar los usuarios</p>;
+    return <ErrorService />;
   }
 
   return (
