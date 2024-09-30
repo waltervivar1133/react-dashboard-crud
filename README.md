@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# React Dashboard - Gestión de Usuarios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un dashboard de gestión de usuarios desarrollado con **React**, **TypeScript**, **Vite**, **React Query**, **React Bootstrap**, **Sass** y **React Data Table**. El proyecto sigue una estructura modular en la que cada módulo contiene sus propios componentes, hooks, servicios, constantes y utilidades, lo que hace que la aplicación sea altamente escalable y fácil de mantener.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
+- **React**: Para construir la interfaz de usuario.
+- **TypeScript**: Para garantizar la seguridad en el tipado a lo largo del proyecto.
+- **Vite**: Para un desarrollo y compilación rápidos.
+- **React Query**: Para la gestión eficiente de la obtención de datos y el estado global.
+- **React Bootstrap**: Para componentes de UI responsivos.
+- **Sass**: Para el uso de características avanzadas de CSS.
+- **React Data Table**: Para mostrar datos tabulares con paginación y selección.
+- **SweetAlert2**: Para diálogos modales como la confirmación de eliminación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Configuración del Proyecto
 
-## Expanding the ESLint configuration
+### Requisitos Previos
+- **Node.js**: Necesitas tener **Node.js** instalado. El proyecto ha sido probado con **Node versión 18.18.2**.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/waltervivar1133/react-dashboard-crud
+   cd react-dashboard-crud
 
-- Configure the top-level `parserOptions` property like this:
+2. Instala las dependencias utilizando Yarn:
+   ```bash
+   yarn install
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+   ```bash
+   yarn dev
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Estructura de Carpetas
+3. Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+   ```bash
+   src/
+    ├── assets/                 # Recursos estáticos (imágenes, fuentes, etc.)
+    ├── module/                 # Módulos por funcionalidad
+    │   ├── UserManagement/      # Módulo de Gestión de Usuarios
+    │   │   ├── components/      # Componentes de UI
+    │   │   ├── hooks/           # Hooks personalizados
+    │   │   ├── services/        # Servicios API
+    │   │   ├── constants/       # Constantes para el módulo
+    │   │   └── utils/           # Funciones de utilidad
+    │   ├── shared/              # Componentes y hooks compartidos
+    ├── styles/                  # Estilos globales (archivos Sass)
+    ├── App.tsx                  # Componente principal de la app
+    ├── main.tsx                 # Punto de entrada
+    ├── tsconfig.json            # Configuración de TypeScript
+    ├── vite.config.ts           # Configuración de Vite
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### URL de Despliegue de la web
+
+- **Link**: https://prueba-tecnica-upch.netlify.app/

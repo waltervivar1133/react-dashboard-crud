@@ -1,8 +1,8 @@
 import { Row, Col, Button } from "react-bootstrap";
 import { User } from "../../types/User";
+import DeleteConfirmationModal from "../DeleteConfirmationModal/DeleteConfirmationModal";
 
 import "./ActionButtons.scss";
-import DeleteConfirmationModal from "../DeleteConfirmationModal/DeleteConfirmationModal";
 interface ActionButtonsProps {
   selectedUser: User | null;
   onEdit: (user: User) => void;
