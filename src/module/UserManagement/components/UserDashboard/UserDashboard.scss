@@ -1,0 +1,78 @@
+
+
+
+
+
+.user-dashboard {
+  margin-top: 2rem;
+
+  &__card-header {
+    background-color: #f8f8f8;
+  }
+
+  &__card-body {
+    background-color: #f8f8f8;
+  }
+
+  &__input-row {
+    margin-bottom: 1.5rem;
+  }
+
+  .input-search {
+    border-right: none !important;
+    height: 34px;
+  }
+  
+  .input-button-search {
+    background: #fff !important;
+  }
+  
+}
+
+// edit styles datatable
+
+.rdt_Table {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.rdt_TableHead {
+  height: 50px;
+}
+
+.rdt_TableCol {
+  text-align: center;
+  background-color: #d3dbdb82;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 9999px inset;
+}
+
+.rdt_TableCol_Sortable {
+  cursor: pointer;
+  color: #000;
+}
+
+.rdt_TableRow {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.rdt_TableRow:hover {
+  background-color: #f1f3f4;
+}
+
+.rdt_TableCell {
+  padding: 12px;
+  text-align: center;
+  color: #555;
+}
+
+.rdt_Pagination {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+.rdt_TableFooter {
+  margin-top: 1rem;
+  border-top: 1px solid #dee2e6;
+}

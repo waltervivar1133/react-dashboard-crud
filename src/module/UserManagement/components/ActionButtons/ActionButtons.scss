@@ -1,0 +1,13 @@
+.action-buttons {
+  &__btn {
+    height: 30px !important; 
+    padding: 0 1rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--gap {
+    gap: 0.5rem;
+  }
+}
